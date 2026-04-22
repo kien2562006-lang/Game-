@@ -95,7 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Background\" />
     <Folder Include="Resources\Bird\" />
     <Folder Include="Resources\Effect\" />
     <Folder Include="Resources\Obstacles\Enemy\" />
@@ -104,6 +103,7 @@
     <Folder Include="Resources\Sound\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Background\forest.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_da.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_go.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_kim_loai.png" />
