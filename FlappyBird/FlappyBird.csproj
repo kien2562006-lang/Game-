@@ -94,20 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Bird\" />
-    <Folder Include="Resources\Effect\" />
-    <Folder Include="Resources\Obstacles\Enemy\" />
-    <Folder Include="Resources\Obstacles\Fire\" />
-    <Folder Include="Resources\Obstacles\Warning\" />
-    <Folder Include="Resources\Sound\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Background\forest.png" />
+    <Content Include="Resources\Bird\map.png" />
+    <Content Include="Resources\Effect\map.png" />
+    <Content Include="Resources\Obstacles\Enemy\map.png" />
+    <Content Include="Resources\Obstacles\Fire\cot_lua.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_da.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_go.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_kim_loai.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_lua.png" />
+    <Content Include="Resources\Obstacles\Warning\forest.png" />
+    <Content Include="Resources\Sound\map.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
