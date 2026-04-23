@@ -8,5 +8,6 @@ namespace FlappyBird.Classes
 {
     internal class Bird
     {
+
     }
 }

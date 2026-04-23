@@ -15,6 +15,14 @@ namespace FlappyBird.Forms
         public frmGame()
         {
             InitializeComponent();
+            this.BackgroundImage = Image.FromFile("Resources/Background/forest.png");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
+        }
+
+        private void frmGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
