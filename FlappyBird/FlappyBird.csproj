@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmGame.resx">
+      <DependentUpon>frmGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,18 +97,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\Effect\" />
+    <Folder Include="Resources\Obstacles\Enemy\" />
+    <Folder Include="Resources\Obstacles\Fire\" />
+    <Folder Include="Resources\Obstacles\Warning\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background\forest.png" />
-    <Content Include="Resources\Bird\map.png" />
-    <Content Include="Resources\Effect\map.png" />
-    <Content Include="Resources\Obstacles\Enemy\map.png" />
-    <Content Include="Resources\Obstacles\Fire\cot_lua.png" />
+    <Content Include="Resources\Background\galaxy.png" />
+    <Content Include="Resources\Background\storm.png" />
+    <Content Include="Resources\Background\volcano.png" />
+    <Content Include="Resources\Bird\bird_gif.gif" />
     <Content Include="Resources\Obstacles\Pipe\cot_da.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_go.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_kim_loai.png" />
     <Content Include="Resources\Obstacles\Pipe\cot_lua.png" />
-    <Content Include="Resources\Obstacles\Warning\forest.png" />
     <Content Include="Resources\Sound\map.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

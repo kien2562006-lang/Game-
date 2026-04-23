@@ -1,45 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|c:\\users\\kien2\\documents\\btap\\flappybird\\flappybird\\classes\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\forms\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\forms\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\classes\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|c:\\users\\admin\\documents\\btap\\flappybird\\flappybird\\forms\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\classes\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|c:\\users\\admin\\documents\\btap\\flappybird\\flappybird\\forms\\frmgame.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmgame.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\classes\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\classes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\classes\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\classes\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\classes\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|c:\\users\\admin\\documents\\btap\\flappybird\\flappybird\\classes\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\classes\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\flappybird\\forms\\frmgameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\classes\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\classes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\classes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\flappybird\\forms\\frmgameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DAEB27E0-DF77-4240-8C9D-AF702DDEC8A7}|FlappyBird\\FlappyBird.csproj|solutionrelative:flappybird\\forms\\frmgameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -50,76 +58,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Program.cs",
-              "RelativeDocumentMoniker": "FlappyBird\\Program.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Program.cs",
-              "RelativeToolTip": "FlappyBird\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Title": "frmGame.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmGame.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs [Design]",
+              "RelativeToolTip": "FlappyBird\\Forms\\frmGame.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T08:15:51.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Obstacle.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Obstacle.cs",
-              "RelativeDocumentMoniker": "FlappyBird\\Classes\\Obstacle.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Obstacle.cs",
-              "RelativeToolTip": "FlappyBird\\Classes\\Obstacle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T07:49:28.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Enemy.cs",
-              "RelativeDocumentMoniker": "FlappyBird\\Classes\\Enemy.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Enemy.cs",
-              "RelativeToolTip": "FlappyBird\\Classes\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T07:49:04.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameEngine.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\GameEngine.cs",
-              "RelativeDocumentMoniker": "FlappyBird\\Classes\\GameEngine.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\GameEngine.cs",
-              "RelativeToolTip": "FlappyBird\\Classes\\GameEngine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T07:48:56.138Z"
+              "WhenOpened": "2026-04-22T07:37:03.747Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Program.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Program.cs",
+              "RelativeToolTip": "FlappyBird\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T08:15:51.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmGame.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmGame.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs",
+              "RelativeToolTip": "FlappyBird\\Forms\\frmGame.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAvwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T16:54:36.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmGame.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.Designer.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmGame.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.Designer.cs",
+              "RelativeToolTip": "FlappyBird\\Forms\\frmGame.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T16:49:51.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameEngine.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\GameEngine.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Classes\\GameEngine.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\GameEngine.cs",
+              "RelativeToolTip": "FlappyBird\\Classes\\GameEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T07:48:56.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MapConfig.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\MapConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\MapConfig.cs",
               "RelativeDocumentMoniker": "FlappyBird\\Classes\\MapConfig.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\MapConfig.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\MapConfig.cs",
               "RelativeToolTip": "FlappyBird\\Classes\\MapConfig.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAIwCAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T07:48:43.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Pipe.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Pipe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Pipe.cs",
               "RelativeDocumentMoniker": "FlappyBird\\Classes\\Pipe.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Pipe.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Pipe.cs",
               "RelativeToolTip": "FlappyBird\\Classes\\Pipe.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -127,46 +167,61 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Bird.cs",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Bird.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Bird.cs",
               "RelativeDocumentMoniker": "FlappyBird\\Classes\\Bird.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Classes\\Bird.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Bird.cs",
               "RelativeToolTip": "FlappyBird\\Classes\\Bird.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T07:48:19.066Z"
+              "WhenOpened": "2026-04-22T07:48:19.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "Obstacle.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Obstacle.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Classes\\Obstacle.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Obstacle.cs",
+              "RelativeToolTip": "FlappyBird\\Classes\\Obstacle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T07:49:28.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "frmMenu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmMenu.cs",
               "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmMenu.cs",
               "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmMenu.cs [Design]",
-              "RelativeToolTip": "FlappyBird\\Forms\\frmMenu.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T07:37:50.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmGame.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs",
-              "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmGame.cs",
-              "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmGame.cs [Design]",
-              "RelativeToolTip": "FlappyBird\\Forms\\frmGame.cs [Design]",
+              "DocumentIndex": 10,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Enemy.cs",
+              "RelativeDocumentMoniker": "FlappyBird\\Classes\\Enemy.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Classes\\Enemy.cs",
+              "RelativeToolTip": "FlappyBird\\Classes\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T07:37:03.747Z"
+              "WhenOpened": "2026-04-22T07:49:04.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "frmGameOver.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmGameOver.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\btap\\FlappyBird\\FlappyBird\\Forms\\frmGameOver.cs",
               "RelativeDocumentMoniker": "FlappyBird\\Forms\\frmGameOver.cs",
               "ToolTip": "C:\\Users\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmGameOver.cs [Design]",
-              "RelativeToolTip": "FlappyBird\\Forms\\frmGameOver.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\kien2\\Documents\\Btap\\FlappyBird\\FlappyBird\\Forms\\frmGameOver.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T07:37:19.305Z"
             }
