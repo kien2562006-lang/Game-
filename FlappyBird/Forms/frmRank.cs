@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace FlappyBird.Forms
 {
-    public partial class frmGame : Form
+    public partial class frmRank : Form
     {
-        public frmGame()
+        public frmRank()
         {
             InitializeComponent();
-
-        }
-
-        private void frmGame_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

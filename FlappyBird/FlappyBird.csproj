@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Bird.cs" />
+    <Compile Include="Classes\Boss.cs" />
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\GameEngine.cs" />
     <Compile Include="Classes\MapConfig.cs" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRank.Designer.cs">
+      <DependentUpon>frmRank.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,9 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Effect\" />
-    <Folder Include="Resources\Obstacles\Enemy\" />
-    <Folder Include="Resources\Obstacles\Fire\" />
+    <Folder Include="Resources\Obstacles\Hazard\" />
     <Folder Include="Resources\Obstacles\Warning\" />
+    <Folder Include="Resources\Sound\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background\forest.png" />
@@ -109,11 +116,10 @@
     <Content Include="Resources\Background\storm.png" />
     <Content Include="Resources\Background\volcano.png" />
     <Content Include="Resources\Bird\bird_gif.gif" />
-    <Content Include="Resources\Obstacles\Pipe\cot_da.png" />
-    <Content Include="Resources\Obstacles\Pipe\cot_go.png" />
-    <Content Include="Resources\Obstacles\Pipe\cot_kim_loai.png" />
-    <Content Include="Resources\Obstacles\Pipe\cot_lua.png" />
-    <Content Include="Resources\Sound\map.png" />
+    <Content Include="Resources\Obstacles\Pipe\pipe_forest.png" />
+    <Content Include="Resources\Obstacles\Pipe\pipe_space.png" />
+    <Content Include="Resources\Obstacles\Pipe\pipe_storm.png" />
+    <Content Include="Resources\Obstacles\Pipe\pipe_volcano.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
