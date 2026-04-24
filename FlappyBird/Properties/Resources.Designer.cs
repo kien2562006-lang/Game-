@@ -63,6 +63,16 @@ namespace FlappyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Forest {
+            get {
+                object obj = ResourceManager.GetObject("Forest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pipe_forest {
             get {
                 object obj = ResourceManager.GetObject("pipe_forest", resourceCulture);
@@ -96,6 +106,36 @@ namespace FlappyBird.Properties {
         internal static System.Drawing.Bitmap pipe_volcano {
             get {
                 object obj = ResourceManager.GetObject("pipe_volcano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Space {
+            get {
+                object obj = ResourceManager.GetObject("Space", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Storm {
+            get {
+                object obj = ResourceManager.GetObject("Storm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volcano {
+            get {
+                object obj = ResourceManager.GetObject("Volcano", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlappyBird.Classes
 {
-    internal class Enemy
+    internal class Hazard
     {
     }
 }

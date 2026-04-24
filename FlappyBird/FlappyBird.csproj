@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="Classes\Bird.cs" />
     <Compile Include="Classes\Boss.cs" />
-    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\Crow.cs" />
     <Compile Include="Classes\GameEngine.cs" />
+    <Compile Include="Classes\Hazard.cs" />
     <Compile Include="Classes\MapConfig.cs" />
-    <Compile Include="Classes\Obstacle.cs" />
     <Compile Include="Classes\Pipe.cs" />
     <Compile Include="Forms\frmGame.cs">
       <SubType>Form</SubType>
@@ -90,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,10 +112,10 @@
     <Folder Include="Resources\Sound\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Background\forest.png" />
-    <Content Include="Resources\Background\galaxy.png" />
-    <Content Include="Resources\Background\storm.png" />
-    <Content Include="Resources\Background\volcano.png" />
+    <Content Include="Resources\Background\Forest.png" />
+    <Content Include="Resources\Background\Space.png" />
+    <Content Include="Resources\Background\Storm.png" />
+    <Content Include="Resources\Background\Volcano.png" />
     <Content Include="Resources\Bird\bird_gif.gif" />
     <Content Include="Resources\Obstacles\Pipe\pipe_forest.png" />
     <Content Include="Resources\Obstacles\Pipe\pipe_space.png" />
