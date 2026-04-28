@@ -106,13 +106,5 @@ namespace FlappyBird.Classes
             if (bottomRect.Height > 0)
                 g.DrawImage(SkinBottom, bottomRect);
         }
-
-        // ── Đổi ảnh khi đổi map ───────────────────────
-        public void ChangeMap(Image top, Image bottom) // thêm vào
-        {
-            SkinTop = top;
-            SkinBottom = bottom;
-        }
-
     }
 }
