@@ -16,5 +16,30 @@ namespace FlappyBird.Forms
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolcano_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnForest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStorm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

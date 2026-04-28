@@ -1,26 +1,123 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlappyBird.Classes;
 
 namespace FlappyBird.Forms
 {
     public partial class frmGame : Form
     {
-        public frmGame()
+        // ── Thuộc tính ────────────────────────────────
+        private GameEngine engine;  // toàn bộ logic game nằm đây
+        private Timer timer;        // 16ms tick (~60fps)
+        private Stopwatch stopwatch; // đo delta time chính xác
+
+        // ── Constructor ───────────────────────────────
+        // Nhận GameEngine đã được tạo sẵn từ frmMenu
+        public frmGame(GameEngine engine)
         {
             InitializeComponent();
 
+            this.engine = engine;
+
+            // Bắt buộc — tránh nhấp nháy khi vẽ 60fps
+            this.DoubleBuffered = true;
+
+            // Đăng ký lắng nghe event GameOver từ engine
+            // Khi bird chết, engine sẽ gọi event này
+            this.engine.OnGameOver += Engine_OnGameOver;
+
+            // Khởi tạo timer
+            timer = new Timer();
+            timer.Interval = 16; // ~60fps
+            timer.Tick += Timer_Tick;
+
+            // Khởi tạo stopwatch để đo delta time thực tế
+            stopwatch = new Stopwatch();
         }
 
+        // ── Load form ─────────────────────────────────
         private void frmGame_Load(object sender, EventArgs e)
         {
+            // Đặt kích thước form khớp với screenW/H của engine
+            this.ClientSize = new Size(engine.screenW, engine.screenH);
 
+            stopwatch.Start();
+            timer.Start();
+        }
+
+        // ── Timer_Tick — trái tim của game ────────────
+        // Gọi mỗi 16ms: tính dt → update engine → vẽ lại
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Tính delta time (số giây từ lần tick trước đến giờ)
+            float dt = (float)stopwatch.Elapsed.TotalSeconds;
+            stopwatch.Restart(); // reset để lần sau tính tiếp
+
+            // Cập nhật toàn bộ logic game
+            engine.Update(dt);
+
+            // Kích hoạt OnPaint để vẽ lại màn hình
+            this.Invalidate();
+        }
+
+        // ── OnPaint — vẽ toàn bộ màn hình ─────────────
+        // Form không tự vẽ gì — chỉ giao cho engine
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            engine.Draw(e.Graphics);
+        }
+
+        // ── OnKeyDown — nhận input bàn phím ───────────
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+                engine.bird.Flap();
+
+            // Nhấn Escape → thoát về menu
+            if (e.KeyCode == Keys.Escape)
+            {
+                timer.Stop();
+                this.Close();
+            }
+        }
+
+        // ── Engine_OnGameOver — nhận event khi thua ───
+        // Engine gọi event này khi bird chết
+        private void Engine_OnGameOver(int finalScore)
+        {
+            timer.Stop();
+            stopwatch.Stop();
+
+            this.Invoke((Action)(() =>
+            {
+                // Thêm engine.currentMap vào tham số
+                var gameOver = new frmGameOver(finalScore, engine.currentMap);
+                gameOver.ShowDialog();
+
+                if (gameOver.WantsRetry)
+                {
+                    var newEngine = new GameEngine(
+                        engine.currentMap,
+                        engine.screenW,
+                        engine.screenH
+                    );
+                    var newGame = new frmGame(newEngine);
+                    newGame.Show();
+                }
+
+                this.Close();
+            }));
+        }
+
+        // ── Dọn dẹp khi form đóng ─────────────────────
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            timer.Stop();
+            timer.Dispose();
+            stopwatch.Stop();
+            base.OnFormClosed(e);
         }
     }
 }
