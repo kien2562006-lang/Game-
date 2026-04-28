@@ -63,7 +63,20 @@ namespace FlappyBird.Classes
         public void Draw(Graphics g)
         {
             if (sprite == null) return; // tránh crash nếu chưa load ảnh
-            g.DrawImage(sprite, X, Y, Width, Height);
+                                        // Tính góc xoay dựa theo tốc độ rơi
+            float angle = velocityY * 0.1f;
+            if (angle < -30f) angle = -30f; // giới hạn góc ngẩng lên tối đa 30 
+            if (angle > 90f) angle = 90f; // giới hạn góc ngẩng lên tối đa 90
+
+            // Tâm xoay là giữa sprite
+            float cx = X + Width / 2f;
+            float cy = Y + Height / 2f;
+
+            var state = g.Save();
+            g.TranslateTransform(cx, cy);
+            g.RotateTransform(angle);
+            g.DrawImage(sprite, -Width / 2f, -Height / 2f, Width, Height);
+            g.Restore(state);
         }
 
         // ── Hitbox ────────────────────────────────────
