@@ -44,7 +44,8 @@
             // 
             // picBackground
             // 
-            this.picBackground.Location = new System.Drawing.Point(-13, -42);
+            this.picBackground.Image = global::FlappyBird.Properties.Resources.Forest;
+            this.picBackground.Location = new System.Drawing.Point(-11, -58);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1536, 1024);
             this.picBackground.TabIndex = 0;
