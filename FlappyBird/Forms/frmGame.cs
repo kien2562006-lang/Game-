@@ -18,7 +18,7 @@ namespace FlappyBird.Forms
         public frmGame(GameEngine engine)
         {
             InitializeComponent();
-
+            this.KeyPreview = true;
             this.engine = engine;
 
             // Bắt buộc — tránh nhấp nháy khi vẽ 60fps

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FlappyBird.Classes
 {
-    internal class MapConfig
+    public  class MapConfig
     {
         // ── Thông tin map ─────────────────────────────
         public string MapName;

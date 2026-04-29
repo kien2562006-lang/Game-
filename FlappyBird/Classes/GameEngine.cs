@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlappyBird.Properties;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FlappyBird.Classes
 {
-    internal class GameEngine
+    public class GameEngine
     {
         // ── Đối tượng game ────────────────────────────
         public Bird bird;                    // nhân vật chính
@@ -62,7 +63,7 @@ namespace FlappyBird.Classes
             bird = new Bird(
                 x: screenW / 3f,
                 y: screenH / 3f,
-                sprite: map.Background,   // tạm dùng background, thay bằng ảnh bird thực tế
+                sprite: Resources.bird_gif, 
                 width: 40,
                 height: 30,
                 gravity: map.Gravity,
@@ -94,10 +95,12 @@ namespace FlappyBird.Classes
             {
                 pipe.Update(dt);
 
-                // Tính điểm khi bird vượt qua giữa cột
-                // Điều kiện: cột vừa đi qua vị trí X của bird
-                if (!pipe.IsAlive && pipe.X + pipe.Width < bird.X)
+                // Tính điểm khi cột vượt qua vị trí bird (cột còn sống)
+                if (pipe.IsAlive && pipe.X + pipe.Width < bird.X && !pipe.Scored)
+                {
                     score++;
+                    pipe.Scored = true; // đánh dấu đã tính điểm rồi, không tính lại
+                }
             }
 
             // 4. Xóa các cột đã ra khỏi màn hình

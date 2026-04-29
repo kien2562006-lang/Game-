@@ -4,10 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Imaging;
 
 namespace FlappyBird.Classes
 {
-    internal class Bird
+    public class Bird
     {
         // ── Vị trí & chuyển động ──────────────────────
         public float X, Y;
@@ -38,6 +39,8 @@ namespace FlappyBird.Classes
             Height = height;
             this.gravity = gravity;
             _screenH = screenH;
+
+            ImageAnimator.Animate(this.sprite, null);
         }
 
         // ── Update ────────────────────────────────────
@@ -64,6 +67,8 @@ namespace FlappyBird.Classes
         {
             if (sprite == null) return; // tránh crash nếu chưa load ảnh
                                         // Tính góc xoay dựa theo tốc độ rơi
+            ImageAnimator.UpdateFrames(sprite);
+
             float angle = velocityY * 0.1f;
             if (angle < -30f) angle = -30f; // giới hạn góc ngẩng lên tối đa 30 
             if (angle > 90f) angle = 90f; // giới hạn góc ngẩng lên tối đa 90

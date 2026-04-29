@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FlappyBird.Classes
 {
-  internal class Pipe
+  public class Pipe
   {
         // ── Vị trí & kích thước ───────────────────────
         public float X;
@@ -27,6 +27,7 @@ namespace FlappyBird.Classes
 
         // ── Trạng thái ────────────────────────────────
         public bool IsAlive = true; // thêm vào — GameEngine cần cái này
+        public bool Scored = false;
 
         // ── Biến nội bộ ───────────────────────────────
         private float originGapY;
