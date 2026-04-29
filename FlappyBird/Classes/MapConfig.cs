@@ -70,7 +70,8 @@ namespace FlappyBird.Classes
             gapSize: 160,
             spawnInterval: 1800,
             obstacleTypes: new List<string> { "crow", "tree" },
-            bossScore: 15
+            bossScore: 30,
+            movingPipes: false
         );
 
         public static MapConfig Volcano => new MapConfig(
@@ -83,7 +84,9 @@ namespace FlappyBird.Classes
             gapSize: 150,
             spawnInterval: 1600,
             obstacleTypes: new List<string> { "fire", "meteor" },
-            bossScore: 35
+            bossScore: 30,
+            movingPipes: false
+
         );
 
         public static MapConfig Storm => new MapConfig(
@@ -96,8 +99,8 @@ namespace FlappyBird.Classes
             gapSize: 140,
             spawnInterval: 1400,
             obstacleTypes: new List<string> { "lightning", "crow" },
-            bossScore: 55,
-            movingPipes: true   // từ map này cột bắt đầu di động
+            bossScore: 30,
+            movingPipes: false   
         );
 
         public static MapConfig Space => new MapConfig(
@@ -110,8 +113,8 @@ namespace FlappyBird.Classes
             gapSize: 130,
             spawnInterval: 1200,
             obstacleTypes: new List<string> { "meteor", "laser" },
-            bossScore: 80,
-            movingPipes: true
+            bossScore: 30,
+            movingPipes: false
         );
     }
 }

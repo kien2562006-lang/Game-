@@ -44,7 +44,6 @@
             // 
             // picBackground
             // 
-            this.picBackground.Image = global::FlappyBird.Properties.Resources.Forest;
             this.picBackground.Location = new System.Drawing.Point(-7, -34);
             this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
@@ -155,6 +154,7 @@
             this.btnSpace.TabIndex = 8;
             this.btnSpace.Text = "🌌 Space";
             this.btnSpace.UseVisualStyleBackColor = false;
+            this.btnSpace.Click += new System.EventHandler(this.btnSpace_Click_1);
             // 
             // btnLeaderBoard
             // 
@@ -168,6 +168,7 @@
             this.btnLeaderBoard.TabIndex = 9;
             this.btnLeaderBoard.Text = "🏆 Bảng xếp hạng";
             this.btnLeaderBoard.UseVisualStyleBackColor = false;
+            this.btnLeaderBoard.Click += new System.EventHandler(this.btnLeaderBoard_Click_1);
             // 
             // btnStart
             // 
@@ -206,7 +207,6 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flappy Bird Extended";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

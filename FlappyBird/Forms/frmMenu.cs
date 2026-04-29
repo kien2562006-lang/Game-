@@ -76,7 +76,7 @@ namespace FlappyBird
             HighlightButton(btnStorm);
         }
 
-        private void btnSpace_Click(object sender, EventArgs e)
+        private void btnSpace_Click_1(object sender, EventArgs e)
         {
             selectedMap = MapConfig.Space;
             HighlightButton(btnSpace);
@@ -135,14 +135,11 @@ namespace FlappyBird
         // ══════════════════════════════════════════════
         // Leaderboard (chưa làm)
         // ══════════════════════════════════════════════
-        private void btnLeaderboard_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Chưa làm bảng xếp hạng 😄");
-        }
 
-        private void frmMenu_Load(object sender, EventArgs e)
+        private void btnLeaderBoard_Click_1(object sender, EventArgs e)
         {
-
+            frmLeaderboard lb = new frmLeaderboard();
+            lb.ShowDialog();
         }
     }
 }

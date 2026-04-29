@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FlappyBird.Forms
 {
-    public partial class frmRank : Form
+    public partial class frmLeaderboard : Form
     {
-        public frmRank()
+        public frmLeaderboard()
         {
             InitializeComponent();
+        }
+
+        private void frmLeaderboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

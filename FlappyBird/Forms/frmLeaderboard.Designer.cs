@@ -1,6 +1,6 @@
 ﻿namespace FlappyBird.Forms
 {
-    partial class frmRank
+    partial class frmLeaderboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmLeaderboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmRank";
+            this.Name = "frmLeaderboard";
+            this.Text = "frmLeaderboard";
+            this.Load += new System.EventHandler(this.frmLeaderboard_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

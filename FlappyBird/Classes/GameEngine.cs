@@ -65,7 +65,7 @@ namespace FlappyBird.Classes
                 y: screenH / 3f,
                 sprite: Resources.bird_gif, 
                 width: 40,
-                height: 30,
+                height: 37,
                 gravity: map.Gravity,
                 screenH: screenH
             );
@@ -77,17 +77,17 @@ namespace FlappyBird.Classes
         // ══════════════════════════════════════════════
         public void Update(float dt)
         {
-            if (!isRunning) return; // game đã kết thúc, không làm gì thêm
+            if (!isRunning) return;
 
             // 1. Cập nhật bird
             bird.Update(dt);
 
             // 2. Đếm thời gian để spawn cột mới
-            spawnTimer += dt * 1000f; // chuyển dt (giây) sang ms để so sánh với SpawnInterval
+            spawnTimer += dt * 1000f;
             if (spawnTimer >= currentMap.SpawnInterval)
             {
                 SpawnPipe();
-                spawnTimer = 0f; // reset bộ đếm
+                spawnTimer = 0f;
             }
 
             // 3. Cập nhật tất cả cột, kiểm tra tính điểm
@@ -95,20 +95,30 @@ namespace FlappyBird.Classes
             {
                 pipe.Update(dt);
 
-                // Tính điểm khi cột vượt qua vị trí bird (cột còn sống)
                 if (pipe.IsAlive && pipe.X + pipe.Width < bird.X && !pipe.Scored)
                 {
                     score++;
-                    pipe.Scored = true; // đánh dấu đã tính điểm rồi, không tính lại
+                    pipe.Scored = true;
                 }
             }
+
+            // ── Bật tính năng theo mốc điểm ─────────────── ← THÊM VÀO ĐÂY
+            if (score >= 15 && !currentMap.MovingPipes)
+            {
+                currentMap.MovingPipes = true;
+
+                // Cập nhật luôn các cột đang có trên màn hình
+                foreach (var pipe in pipes)
+                    pipe.IsMoving = true;
+            }
+            // ─────────────────────────────────────────────────────────────
 
             // 4. Xóa các cột đã ra khỏi màn hình
             pipes.RemoveAll(p => !p.IsAlive);
 
             // 5. Đếm thời gian để spawn obstacle mới
             obstacleTimer += dt * 1000f;
-            if (obstacleTimer >= 3000f) // spawn obstacle mỗi 3 giây
+            if (obstacleTimer >= 3000f)
             {
                 SpawnObstacle();
                 obstacleTimer = 0f;
