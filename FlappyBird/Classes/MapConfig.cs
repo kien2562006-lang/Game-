@@ -10,6 +10,7 @@ namespace FlappyBird.Classes
 {
     public  class MapConfig
     {
+        
         // ── Thông tin map ─────────────────────────────
         public string MapName;
         public Image Background;
@@ -20,9 +21,10 @@ namespace FlappyBird.Classes
 
         // ── Thông số vật lý ───────────────────────────
         public float Gravity;         // trọng lực tác dụng lên bird
-        public float PipeSpeed;       // tốc độ cột di chuyển sang trái
+        public float PipeSpeedX;       // tốc độ cột di chuyển sang trái
         public int GapSize;         // khoảng hở giữa hai ống
         public int SpawnInterval;   // ms giữa 2 lần tạo cột mới
+        public float MaxPipeSpeedX;
 
         // ── Cột di động (level khó) ───────────────────
         public bool MovingPipes;     // bật/tắt cột dao động lên xuống
@@ -36,7 +38,7 @@ namespace FlappyBird.Classes
         // ── Constructor ───────────────────────────────
         public MapConfig(string mapName, Image background,
                          Image pipeSkinTop, Image pipeSkinBottom,
-                         float gravity, float pipeSpeed,
+                         float gravity, float pipeSpeed, float maxpipeSpeed,
                          int gapSize, int spawnInterval,
                          List<string> obstacleTypes,
                          int bossScore,
@@ -49,7 +51,8 @@ namespace FlappyBird.Classes
             PipeSkinTop = pipeSkinTop;
             PipeSkinBottom = pipeSkinBottom;
             Gravity = gravity;
-            PipeSpeed = pipeSpeed;
+            PipeSpeedX = pipeSpeed;
+            MaxPipeSpeedX = maxpipeSpeed;
             GapSize = gapSize;
             SpawnInterval = spawnInterval;
             ObstacleTypes = obstacleTypes;
@@ -67,6 +70,7 @@ namespace FlappyBird.Classes
             pipeSkinBottom: Resources.pipe_forest,
             gravity: 800f,
             pipeSpeed: 200f,
+            maxpipeSpeed: 400f, 
             gapSize: 160,
             spawnInterval: 1800,
             obstacleTypes: new List<string> { "crow", "tree" },
@@ -81,6 +85,7 @@ namespace FlappyBird.Classes
             pipeSkinBottom: Resources.pipe_volcano,
             gravity: 850f,
             pipeSpeed: 220f,
+            maxpipeSpeed: 440f,
             gapSize: 150,
             spawnInterval: 1600,
             obstacleTypes: new List<string> { "fire", "meteor" },
@@ -96,6 +101,7 @@ namespace FlappyBird.Classes
             pipeSkinBottom: Resources.pipe_storm,
             gravity: 900f,
             pipeSpeed: 250f,
+            maxpipeSpeed: 500f,
             gapSize: 140,
             spawnInterval: 1400,
             obstacleTypes: new List<string> { "lightning", "crow" },
@@ -110,6 +116,7 @@ namespace FlappyBird.Classes
             pipeSkinBottom: Resources.pipe_space,
             gravity: 950f,
             pipeSpeed: 280f,
+            maxpipeSpeed: 560f,
             gapSize: 130,
             spawnInterval: 1200,
             obstacleTypes: new List<string> { "meteor", "laser" },

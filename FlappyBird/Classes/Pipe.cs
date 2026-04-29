@@ -16,9 +16,9 @@ namespace FlappyBird.Classes
         public int Width = 60;
 
         // ── Chuyển động ───────────────────────────────
-        public float Speed;
+        public float SpeedX;
         public bool IsMoving;
-        public float MoveSpeed;
+        public float MoveSpeedY;
         public float MoveRange;
 
         // ── Hình ảnh ──────────────────────────────────
@@ -43,13 +43,13 @@ namespace FlappyBird.Classes
             X = x;
             GapY = gapY;
             GapSize = gapSize;
-            Speed = speed;
+            SpeedX = speed;
 
             SkinTop = top;
             SkinBottom = bottom;
 
             IsMoving = isMoving;
-            MoveSpeed = moveSpeed;
+            MoveSpeedY = moveSpeed;
             MoveRange = moveRange;
 
             originGapY = gapY;
@@ -59,13 +59,15 @@ namespace FlappyBird.Classes
         // ── Update ────────────────────────────────────
         public void Update(float dt)
         {
-            X -= Speed * dt;
+            X -= SpeedX * dt;
 
             if (IsMoving)
             {
                 time += dt;
-                GapY = originGapY + (float)Math.Sin(time * MoveSpeed) * MoveRange;
+                GapY = originGapY + (float)Math.Sin(time * MoveSpeedY) * MoveRange;
+                // maxpipespeedX = ?? speedX
             }
+
 
             // tự set IsAlive — GameEngine sẽ xóa pipe này
             if (IsOffScreen())

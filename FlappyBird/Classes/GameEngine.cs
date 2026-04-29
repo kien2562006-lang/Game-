@@ -171,12 +171,17 @@ namespace FlappyBird.Classes
             int minGapY = (int)(screenH * 0.2f);
             int maxGapY = (int)(screenH * 0.8f);
             float gapY = rng.Next(minGapY, maxGapY);
+            //tăng tốc độ cột đến MaxPipesSpeedX
+            float currentSpeed = Math.Min(
+            currentMap.PipeSpeedX + score * 2f,
+            currentMap.MaxPipeSpeedX
+            );
 
             var pipe = new Pipe(
                 x: screenW,                         // xuất hiện từ bên phải màn hình
                 gapY: gapY,
                 gapSize: currentMap.GapSize,
-                speed: currentMap.PipeSpeed,
+                speed: currentSpeed,
                 top: currentMap.PipeSkinTop,
                 bottom: currentMap.PipeSkinBottom,
                 isMoving: currentMap.MovingPipes,
