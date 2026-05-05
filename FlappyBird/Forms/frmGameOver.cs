@@ -1,7 +1,8 @@
-﻿using System;
+﻿using FlappyBird.Classes;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using FlappyBird.Classes;
 
 namespace FlappyBird.Forms
 {
@@ -9,75 +10,60 @@ namespace FlappyBird.Forms
     {
         // ── Thuộc tính ────────────────────────────────
         private int finalScore;   // điểm vừa đạt, nhận từ engine
-        private int highScore;    // điểm cao nhất, đọc từ file
+        private int highScore;    // điểm cao nhất, đọc từ sql
         private MapConfig currentMap; // map đang dùng, để Retry đúng map
+
+        private string playerName;   // nhận từ frmGame
+        private int playerID;     // lấy từ DatabaseHelper
 
         public bool WantsRetry = false; // frmGame đọc cái này sau khi form đóng
 
-        // ── Đường dẫn file lưu điểm ──────────────────
-        private static string ScoreFilePath =
-            Path.Combine(Application.StartupPath, "scores.txt");
 
         // ── Constructor ───────────────────────────────
-        public frmGameOver(int finalScore, MapConfig currentMap)
+        public frmGameOver(int finalScore, MapConfig currentMap, string playerName)
         {
             InitializeComponent();
 
             this.finalScore = finalScore;
             this.currentMap = currentMap;
-            // Đọc điểm cao nhất từ file
-            highScore = LoadHighScore();
+            this.playerName = playerName;
+           
+            // Lấy highScore TRƯỚC khi lưu
+            highScore = DatabaseHelper.GetBestScore(playerName, currentMap.MapName);
+            
+            // Rồi mới lưu
+            SaveScore();
+            
 
-            // Lưu nếu điểm mới cao hơn
-            SaveHighScore();
+            // Giờ so sánh mới đúng
+            lblNewRecord.Text = (finalScore > highScore) ? "🎉 NEW RECORD!" : "";
 
-            // Hiển thị điểm lên label
-            lblFinalScore.Text = "Điểm của bạn: " + finalScore.ToString();
-            lblHighScore.Text = "Điểm cao nhất: " + highScore.ToString();
+            // Cập nhật lại highScore để hiển thị đúng
+            highScore = DatabaseHelper.GetBestScore(playerName, currentMap.MapName);
+            lblHighScore.Text = "BEST SCORE: " + highScore;
+            lblFinalScore.Text = "SCORE: " + finalScore;
 
-            // Nếu vừa phá kỷ lục thì hiện thông báo
-            if (finalScore >= highScore)
-                lblNewRecord.Text = "🎉 Kỷ lục mới!";
-            else
-                lblNewRecord.Text = "";
-
+            
         }
-
-        // ── Đọc điểm cao nhất từ file ─────────────────
-        private int LoadHighScore()
+       
+        // ─ Lưu điểm cao nhất xuống file ──────────────
+        private void SaveScore()
         {
-            // Nếu file chưa tồn tại thì trả về 0
-            if (!File.Exists(ScoreFilePath))
-                return 0;
+            playerID = DatabaseHelper.GetOrCreatePlayer(playerName);
+            DatabaseHelper.SaveScore(playerID, currentMap.MapName, finalScore);
 
-            // Đọc file, thử parse sang int
-            string content = File.ReadAllText(ScoreFilePath).Trim();
-            if (int.TryParse(content, out int saved))
-                return saved;
-
-            return 0; // file bị lỗi định dạng → coi như 0
         }
-
-        // ── Lưu điểm cao nhất xuống file ──────────────
-        private void SaveHighScore()
-        {
-            // Chỉ ghi đè nếu điểm mới cao hơn
-            if (finalScore > highScore)
-            {
-                highScore = finalScore; // cập nhật biến luôn để hiển thị đúng
-                File.WriteAllText(ScoreFilePath, highScore.ToString());
-            }
-        }
-
         // ── Retry — chơi lại cùng map ─────────────────
-        private void btnRetry_Click(object sender, EventArgs e)
+    
+
+        // ── Menu — về màn hình chọn map ───────────────
+        private void btnRetry_Click_1(object sender, EventArgs e)
         {
             WantsRetry = true;
             this.Close(); // frmGame sẽ đọc WantsRetry và tạo lại game
         }
 
-        // ── Menu — về màn hình chọn map ───────────────
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void btnMenu_Click_1(object sender, EventArgs e)
         {
             WantsRetry = false;
             this.Close();
@@ -93,10 +79,25 @@ namespace FlappyBird.Forms
                 }
             }
         }
-
         private void frmGameOver_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void lblHighScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNewRecord_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFinalScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

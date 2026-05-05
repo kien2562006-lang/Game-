@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bird_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bird_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Volcano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volcano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background\Forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phong_nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phong_nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pipe_forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Obstacles\Pipe\pipe_forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Storm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\storm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pipe_space" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Obstacles\Pipe\pipe_space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,13 +136,22 @@
   <data name="pipe_volcano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Obstacles\Pipe\pipe_volcano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pipe_forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Obstacles\Pipe\pipe_forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Space" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background\Space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Storm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background\Storm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Volcano" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background\Volcano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bird_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bird_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="game_over1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game_over2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

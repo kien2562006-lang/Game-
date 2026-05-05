@@ -32,7 +32,8 @@ namespace FlappyBird.Classes
 
         // ── Trạng thái game ───────────────────────────
         private bool isRunning;             // false khi game kết thúc
-
+        public bool IsWaitingToStart = true;
+        public bool IsPaused = false;
         // ── Event thông báo thua ──────────────────────
         // frmGame đăng ký event này để nhận thông báo khi bird chết
         public event Action<int> OnGameOver;
@@ -79,6 +80,9 @@ namespace FlappyBird.Classes
         {
             if (!isRunning) return;
 
+            if (IsWaitingToStart) return;
+
+            if (IsPaused) return;
             // 1. Cập nhật bird
             bird.Update(dt);
 
@@ -103,13 +107,22 @@ namespace FlappyBird.Classes
             }
 
             // ── Bật tính năng theo mốc điểm ─────────────── ← THÊM VÀO ĐÂY
-            if (score >= 15 && !currentMap.MovingPipes)
+            if (score >= 10 && !currentMap.MovingPipes)
             {
                 currentMap.MovingPipes = true;
 
                 // Cập nhật luôn các cột đang có trên màn hình
                 foreach (var pipe in pipes)
                     pipe.IsMoving = true;
+            }
+            // dung cho retry
+            if(score == 0 &&currentMap.MovingPipes==true)
+            {
+                currentMap.MovingPipes = false;
+
+                // Cập nhật luôn các cột đang có trên màn hình
+                foreach (var pipe in pipes)
+                    pipe.IsMoving = false;
             }
             // ─────────────────────────────────────────────────────────────
 
@@ -132,8 +145,12 @@ namespace FlappyBird.Classes
 
             // 8. Kiểm tra spawn boss
             CheckBossSpawn();
+            
         }
-
+        public void StartGame()
+        {
+            IsWaitingToStart = false; // bắt đầu chạy
+        }
         // ══════════════════════════════════════════════
         // Draw — gọi từ OnPaint của frmGame
         // Vẽ theo thứ tự từ sau ra trước để bird luôn hiển thị trên cùng
@@ -158,6 +175,7 @@ namespace FlappyBird.Classes
 
             // 4. Vẽ bird (lớp trên cùng)
             bird.Draw(g);
+
         }
 
         // ══════════════════════════════════════════════
@@ -264,6 +282,10 @@ namespace FlappyBird.Classes
 
             // Raise event — frmGame sẽ nhận và hiển thị frmGameOver
             OnGameOver?.Invoke(score);
+        }
+        public void TogglePause()
+        {
+            IsPaused = !IsPaused;
         }
     }
 }

@@ -12,14 +12,16 @@ namespace FlappyBird.Forms
         private GameEngine engine;  // toàn bộ logic game nằm đây
         private Timer timer;        // 16ms tick (~60fps)
         private Stopwatch stopwatch; // đo delta time chính xác
-
+        private string playerName;
+        public bool IsRetrying = false;
         // ── Constructor ───────────────────────────────
         // Nhận GameEngine đã được tạo sẵn từ frmMenu
-        public frmGame(GameEngine engine)
+        public frmGame(GameEngine engine, string playerName)
         {
             InitializeComponent();
             this.KeyPreview = true;
             this.engine = engine;
+            this.playerName = playerName;
 
             // Bắt buộc — tránh nhấp nháy khi vẽ 60fps
             this.DoubleBuffered = true;
@@ -73,7 +75,18 @@ namespace FlappyBird.Forms
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
-                engine.bird.Flap();
+            {
+                if (engine.IsWaitingToStart)
+                {
+                    engine.StartGame(); // lần đầu nhấn → bắt đầu game
+                    engine.bird.Flap();
+                }
+                else
+                    engine.bird.Flap(); // các lần sau → flap
+            }
+
+            if (e.KeyCode == Keys.P)
+                engine.TogglePause();
 
             // Nhấn Escape → thoát về menu
             if (e.KeyCode == Keys.Escape)
@@ -92,18 +105,20 @@ namespace FlappyBird.Forms
 
             this.Invoke((Action)(() =>
             {
+                string name = string.IsNullOrWhiteSpace(playerName) ? "Anonymous" : playerName;
                 // Thêm engine.currentMap vào tham số
-                var gameOver = new frmGameOver(finalScore, engine.currentMap);
+                var gameOver = new frmGameOver(finalScore, engine.currentMap, playerName);
                 gameOver.ShowDialog();
 
                 if (gameOver.WantsRetry)
                 {
+                    IsRetrying = true;
                     var newEngine = new GameEngine(
                         engine.currentMap,
                         engine.screenW,
                         engine.screenH
                     );
-                    var newGame = new frmGame(newEngine);
+                    var newGame = new frmGame(newEngine,playerName);
                     newGame.Show();
                 }
 
@@ -118,6 +133,14 @@ namespace FlappyBird.Forms
             timer.Dispose();
             stopwatch.Stop();
             base.OnFormClosed(e);
+        }
+
+        
+
+        private void btnPause_Click_1(object sender, EventArgs e)
+        {
+            engine.TogglePause();
+            btnPause.Text = engine.IsPaused ? "▶" : "⏸";
         }
     }
 }

@@ -51,8 +51,6 @@ namespace FlappyBird
             {
                 highScore = 0;
             }
-
-            lblHighScore.Text = "Điểm cao nhất: " + highScore;
         }
 
         // ══════════════════════════════════════════════
@@ -112,6 +110,17 @@ namespace FlappyBird
         // ══════════════════════════════════════════════
         private void btnStart_Click(object sender, EventArgs e)
         {
+            string playerName = txtPlayerName.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(playerName))
+            {
+                MessageBox.Show("Vui lòng nhập tên người chơi!",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                                );
+                return;
+            }
             // Tạo engine
             GameEngine engine = new GameEngine(
                 selectedMap,
@@ -120,12 +129,15 @@ namespace FlappyBird
             );
 
             // Mở game
-            frmGame game = new frmGame(engine);
+            frmGame game = new frmGame(engine, playerName);
 
             game.FormClosed += (s, args) =>
             {
-                this.Visible = true;
-                LoadHighScore();
+                if (!game.IsRetrying)
+                {
+                    this.Visible = true;
+                    LoadHighScore();
+                }
             };
 
             this.Visible = false;
@@ -140,6 +152,36 @@ namespace FlappyBird
         {
             frmLeaderboard lb = new frmLeaderboard();
             lb.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlayerName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBackground_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBird_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
