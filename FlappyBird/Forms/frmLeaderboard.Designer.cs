@@ -45,18 +45,18 @@
             // dgvScores
             // 
             this.dgvScores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScores.Location = new System.Drawing.Point(12, 58);
+            this.dgvScores.Location = new System.Drawing.Point(11, 58);
             this.dgvScores.Name = "dgvScores";
             this.dgvScores.RowHeadersWidth = 51;
             this.dgvScores.RowTemplate.Height = 24;
-            this.dgvScores.Size = new System.Drawing.Size(777, 318);
+            this.dgvScores.Size = new System.Drawing.Size(777, 275);
             this.dgvScores.TabIndex = 1;
             this.dgvScores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScores_CellContentClick);
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(327, 382);
+            this.btnClose.Location = new System.Drawing.Point(334, 339);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(126, 35);
             this.btnClose.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 438);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvScores);

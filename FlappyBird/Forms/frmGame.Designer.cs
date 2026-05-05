@@ -45,12 +45,12 @@
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(13, 24);
+            this.btnPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPause.Location = new System.Drawing.Point(12, 12);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(75, 23);
+            this.btnPause.Size = new System.Drawing.Size(83, 75);
             this.btnPause.TabIndex = 2;
-            this.btnPause.Text = "button2";
-            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click_1);
             // 
             // frmGame
@@ -65,7 +65,6 @@
             this.MinimizeBox = false;
             this.Name = "frmGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
             this.ResumeLayout(false);
 

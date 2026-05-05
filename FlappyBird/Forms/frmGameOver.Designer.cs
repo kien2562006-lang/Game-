@@ -42,7 +42,7 @@
             this.btnRetry.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRetry.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetry.ForeColor = System.Drawing.Color.White;
-            this.btnRetry.Location = new System.Drawing.Point(36, 254);
+            this.btnRetry.Location = new System.Drawing.Point(32, 224);
             this.btnRetry.Name = "btnRetry";
             this.btnRetry.Size = new System.Drawing.Size(125, 66);
             this.btnRetry.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.btnMenu.BackColor = System.Drawing.Color.ForestGreen;
             this.btnMenu.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(428, 254);
+            this.btnMenu.Location = new System.Drawing.Point(424, 224);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(125, 66);
             this.btnMenu.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.lblFinalScore.BackColor = System.Drawing.Color.Black;
             this.lblFinalScore.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinalScore.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFinalScore.Location = new System.Drawing.Point(237, 169);
+            this.lblFinalScore.Location = new System.Drawing.Point(228, 138);
             this.lblFinalScore.Name = "lblFinalScore";
             this.lblFinalScore.Size = new System.Drawing.Size(108, 24);
             this.lblFinalScore.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.lblHighScore.BackColor = System.Drawing.Color.Black;
             this.lblHighScore.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScore.ForeColor = System.Drawing.Color.White;
-            this.lblHighScore.Location = new System.Drawing.Point(208, 210);
+            this.lblHighScore.Location = new System.Drawing.Point(200, 172);
             this.lblHighScore.Name = "lblHighScore";
             this.lblHighScore.Size = new System.Drawing.Size(166, 24);
             this.lblHighScore.TabIndex = 3;
@@ -94,7 +94,7 @@
             this.lblNewRecord.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNewRecord.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewRecord.ForeColor = System.Drawing.Color.Yellow;
-            this.lblNewRecord.Location = new System.Drawing.Point(200, 254);
+            this.lblNewRecord.Location = new System.Drawing.Point(200, 207);
             this.lblNewRecord.Name = "lblNewRecord";
             this.lblNewRecord.Size = new System.Drawing.Size(182, 24);
             this.lblNewRecord.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(55, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(473, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(473, 129);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
