@@ -13,7 +13,7 @@ namespace FlappyBird.Classes
         // ── Đối tượng game ────────────────────────────
         public Bird bird;                    // nhân vật chính
         public List<Pipe> pipes;             // danh sách cột đang hiển thị
-        public List<object> obstacles;       // danh sách Crow / Hazard đang hoạt động
+        public List<object> obstacles;       // danh sách enemy / Hazard đang hoạt động
         public object boss;                  // null nếu chưa xuất hiện
 
         // ── Cấu hình map ──────────────────────────────
@@ -29,6 +29,7 @@ namespace FlappyBird.Classes
         // ── Bộ đếm spawn ─────────────────────────────
         private float spawnTimer;            // đếm ms để biết khi nào spawn cột mới
         private float obstacleTimer;         // đếm ms để biết khi nào spawn obstacle mới
+        
 
         // ── Trạng thái game ───────────────────────────
         private bool isRunning;             // false khi game kết thúc
@@ -107,7 +108,7 @@ namespace FlappyBird.Classes
             }
 
             // ── Bật tính năng theo mốc điểm ─────────────── ← THÊM VÀO ĐÂY
-            if (score >= 10 && !currentMap.MovingPipes)
+            if (score >= 15 && !currentMap.MovingPipes)
             {
                 currentMap.MovingPipes = true;
 
@@ -129,19 +130,33 @@ namespace FlappyBird.Classes
             // 4. Xóa các cột đã ra khỏi màn hình
             pipes.RemoveAll(p => !p.IsAlive);
 
+
             // 5. Đếm thời gian để spawn obstacle mới
-            obstacleTimer += dt * 1000f;
-            if (obstacleTimer >= 3000f)
+            if (score >= 2)
             {
-                SpawnObstacle();
-                obstacleTimer = 0f;
+                obstacleTimer += dt * 1000f;
+                if (obstacleTimer >= 3000f) // Cứ 3 giây tạo 1 con quạ
+                {
+                    SpawnObstacle();
+                    obstacleTimer = 0f;
+                }
             }
 
+
+
             // 6. Xóa các obstacle đã hết hiệu lực
-            obstacles.RemoveAll(o => o == null);
+            foreach (var obj in obstacles)
+            {
+                if (obj is enemy e)
+                {
+                    e.Update(dt);
+                }
+            }
 
             // 7. Kiểm tra va chạm
             CheckCollision();
+                //Xóa obstacles (quạ) đã chết
+            obstacles.RemoveAll(o => o is enemy c && !c.IsAlive); 
 
             // 8. Kiểm tra spawn boss
             CheckBossSpawn();
@@ -175,6 +190,13 @@ namespace FlappyBird.Classes
 
             // 4. Vẽ bird (lớp trên cùng)
             bird.Draw(g);
+
+            // 5. Vẽ obstacles quạ
+            foreach (var obj in obstacles)
+            {
+                if (obj is enemy enemy)
+                    enemy.Draw(g);
+            }
 
         }
 
@@ -212,7 +234,7 @@ namespace FlappyBird.Classes
 
         // ══════════════════════════════════════════════
         // SpawnObstacle — tạo obstacle dựa vào danh sách ObstacleTypes của map
-        // Hiện tại để trống, sẽ bổ sung khi có class Crow và Hazard
+        // Hiện tại để trống, sẽ bổ sung khi có class enemy và Hazard
         // ══════════════════════════════════════════════
         private void SpawnObstacle()
         {
@@ -222,10 +244,22 @@ namespace FlappyBird.Classes
             // Random chọn loại obstacle từ danh sách của map
             string type = currentMap.ObstacleTypes[rng.Next(currentMap.ObstacleTypes.Count)];
 
-            // TODO: tạo Crow hoặc Hazard tương ứng với type
-            // sau khi có class Crow và Hazard sẽ bổ sung vào đây
-            // if (type == "crow") obstacles.Add(new Crow(...));
+            // TODO: tạo enemy hoặc Hazard tương ứng với type
+            // sau khi có class enemy và Hazard sẽ bổ sung vào đây
+            // if (type == "enemy") obstacles.Add(new enemy(...));
             // else obstacles.Add(new Hazard(type, ...));
+            if (type == "enemy")
+            {
+                obstacles.Add(new enemy(
+                    y: rng.Next((int)(screenH * 0.1f), (int)(screenH * 0.8f)),
+                    sprite: currentMap.EnemySprite,   // ← lấy ảnh từ map hiện tại
+                    width: 60,
+                    height: 45,
+                    speedX: currentMap.enemySpeedX,
+                    speedY: 30f,
+                    screenW: screenW
+                ));
+            }
         }
 
         // ══════════════════════════════════════════════
@@ -253,9 +287,18 @@ namespace FlappyBird.Classes
                     return; // dừng ngay, không cần kiểm tra tiếp
                 }
             }
-
             // TODO: kiểm tra va chạm với obstacles và boss
-            // sau khi có class Crow, Hazard, Boss sẽ bổ sung vào đây
+            // sau khi có class enemy, Hazard, Boss sẽ bổ sung vào đây
+            // Kiểm tra va chạm với obstacles
+            foreach (var obj in obstacles)
+            {
+                if (obj is enemy enemy && birdBox.IntersectsWith(enemy.GetHitbox()))
+                {
+                    GameOver();
+                    return;
+                }
+            }
+
         }
 
         // ══════════════════════════════════════════════

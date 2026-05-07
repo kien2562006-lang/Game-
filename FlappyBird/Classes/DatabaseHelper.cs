@@ -9,7 +9,7 @@ namespace FlappyBird.Classes
     {
         // ── Sửa Server=. nếu tên SQL Server của bạn khác ──
         private static string ConnectionString =
-            "Server=.;Database=FlappyBirdDB;Integrated Security=True;";
+           "Data Source=BTK\\SQLEXPRESS;Initial Catalog=FlappyBirdDB;Integrated Security=True";
 
         // ── Tìm hoặc tạo người chơi, trả về PlayerID ──────
         public static int GetOrCreatePlayer(string playerName)

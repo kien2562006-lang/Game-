@@ -151,7 +151,7 @@
   <ItemGroup>
     <Compile Include="Classes\Bird.cs" />
     <Compile Include="Classes\Boss.cs" />
-    <Compile Include="Classes\Crow.cs" />
+    <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\DatabaseHelper.cs" />
     <Compile Include="Classes\GameEngine.cs" />
     <Compile Include="Classes\Hazard.cs" />

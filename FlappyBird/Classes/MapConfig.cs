@@ -30,14 +30,16 @@ namespace FlappyBird.Classes
         public bool MovingPipes;     // bật/tắt cột dao động lên xuống
         public float PipeMoveSpeed;   // tần số dao động (vd: 2.0f)
         public float PipeMoveRange;   // biên độ dao động pixel (vd: 80f)
+        public float enemySpeedX; // tốc độ enemy 
 
         // ── Chướng ngại vật & boss ────────────────────
         public List<string> ObstacleTypes;  // danh sách loại obstacle
         public int BossScore;               // điểm để boss xuất hiện
 
         // ── Constructor ───────────────────────────────
+        public Image EnemySprite;    // ảnh con quạ riêng của từng map
         public MapConfig(string mapName, Image background,
-                         Image pipeSkinTop, Image pipeSkinBottom,
+                         Image pipeSkinTop, Image pipeSkinBottom, Image enemySprite,
                          float gravity, float pipeSpeed, float maxpipeSpeed,
                          int gapSize, int spawnInterval,
                          List<string> obstacleTypes,
@@ -52,6 +54,7 @@ namespace FlappyBird.Classes
             PipeSkinBottom = pipeSkinBottom;
             Gravity = gravity;
             PipeSpeedX = pipeSpeed;
+            enemySpeedX = pipeSpeed + 70f;// toc do enemy
             MaxPipeSpeedX = maxpipeSpeed;
             GapSize = gapSize;
             SpawnInterval = spawnInterval;
@@ -60,6 +63,8 @@ namespace FlappyBird.Classes
             MovingPipes = movingPipes;
             PipeMoveSpeed = pipeMoveSpeed;
             PipeMoveRange = pipeMoveRange;
+            EnemySprite = enemySprite;
+
         }
         // ── 4 map tĩnh — dùng ở bất kỳ đâu trong project ──
 
@@ -68,12 +73,13 @@ namespace FlappyBird.Classes
             background: Resources.Forest,
             pipeSkinTop: Resources.pipe_forest,
             pipeSkinBottom: Resources.pipe_forest,
+            enemySprite: Resources.enemy_forest,
             gravity: 800f,
             pipeSpeed: 200f,
             maxpipeSpeed: 400f, 
-            gapSize: 120,
+            gapSize: 130,
             spawnInterval: 1800,
-            obstacleTypes: new List<string> { "crow", "tree" },
+            obstacleTypes: new List<string> { "enemy", "tree" },
             bossScore: 30,
             movingPipes: false
         );
@@ -83,10 +89,11 @@ namespace FlappyBird.Classes
             background: Resources.Volcano,
             pipeSkinTop: Resources.pipe_volcano,
             pipeSkinBottom: Resources.pipe_volcano,
+            enemySprite: Resources.enemy_volcano,
             gravity: 850f,
             pipeSpeed: 220f,
             maxpipeSpeed: 440f,
-            gapSize: 120,
+            gapSize: 130,
             spawnInterval: 1600,
             obstacleTypes: new List<string> { "fire", "meteor" },
             bossScore: 30,
@@ -99,12 +106,13 @@ namespace FlappyBird.Classes
             background: Resources.Storm,
             pipeSkinTop: Resources.pipe_storm,
             pipeSkinBottom: Resources.pipe_storm,
+            enemySprite: Resources.enemy_storm, 
             gravity: 900f,
             pipeSpeed: 250f,
             maxpipeSpeed: 500f,
-            gapSize: 120,
+            gapSize: 130,
             spawnInterval: 1400,
-            obstacleTypes: new List<string> { "lightning", "crow" },
+            obstacleTypes: new List<string> { "lightning", "enemy" },
             bossScore: 30,
             movingPipes: false   
         );
@@ -114,10 +122,11 @@ namespace FlappyBird.Classes
             background: Resources.Space,
             pipeSkinTop: Resources.pipe_space,
             pipeSkinBottom: Resources.pipe_space,
+            enemySprite: Resources.enemy_space,
             gravity: 950f,
             pipeSpeed: 280f,
             maxpipeSpeed: 560f,
-            gapSize: 120,
+            gapSize: 130,
             spawnInterval: 1200,
             obstacleTypes: new List<string> { "meteor", "laser" },
             bossScore: 30,
