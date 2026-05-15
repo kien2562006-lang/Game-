@@ -9,7 +9,7 @@ namespace FlappyBird.Classes
     {
         // ── Sửa Server=. nếu tên SQL Server của bạn khác ──
         private static string ConnectionString =
-           "Data Source=BTK\\SQLEXPRESS;Initial Catalog=FlappyBirdDB;Integrated Security=True";
+            "Server=.;Database=FlappyBirdDB;Integrated Security=True;";
 
         // ── Tìm hoặc tạo người chơi, trả về PlayerID ──────
         public static int GetOrCreatePlayer(string playerName)
@@ -89,32 +89,79 @@ namespace FlappyBird.Classes
                 }
             }
         }
-
-        // ── Lấy điểm cao nhất của 1 người theo map ────────
-        public static int GetBestScore(string playerName, string mapName)
+        // ── Kiểm tra điểm top 1 của map ───────────────────
+        public static int GetMapTopScore(string mapName)
         {
-            if (string.IsNullOrWhiteSpace(playerName))
-                playerName = "Anonymous";
-
             using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
-
                 string sql = @"
             SELECT ISNULL(MAX(s.Score), 0)
             FROM Scores s
-            JOIN Players p ON s.PlayerID = p.PlayerID
-            WHERE p.PlayerName = @Name 
-            AND s.MapName = @MapName";
+            WHERE s.MapName = @MapName";
 
                 using (var cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Name", playerName);
                     cmd.Parameters.AddWithValue("@MapName", mapName);
                     return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
         }
+
+        // ── Lưu điểm - chỉ lưu nếu cao hơn lần trước ─────
+        public static bool SaveScoreIfBetter(int playerID, string playerName, string mapName, int score)
+        {
+            using (var conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+
+                // Lấy điểm cao nhất hiện tại của người này
+                string getBestSql = @"
+            SELECT ISNULL(MAX(s.Score), -1)
+            FROM Scores s
+            WHERE s.PlayerID = @PlayerID AND s.MapName = @MapName";
+
+                int currentBest;
+                using (var cmd = new SqlCommand(getBestSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PlayerID", playerID);
+                    cmd.Parameters.AddWithValue("@MapName", mapName);
+                    currentBest = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+
+                // Nếu điểm mới không cao hơn → bỏ qua
+                if (score <= currentBest)
+                    return false;
+
+                // Xóa record cũ (nếu có) rồi insert mới
+                // → giữ bảng gọn, mỗi người chỉ có 1 dòng per map
+                string deleteSql = @"
+            DELETE FROM Scores 
+            WHERE PlayerID = @PlayerID AND MapName = @MapName";
+
+                using (var cmd = new SqlCommand(deleteSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PlayerID", playerID);
+                    cmd.Parameters.AddWithValue("@MapName", mapName);
+                    cmd.ExecuteNonQuery();
+                }
+
+                string insertSql = @"
+            INSERT INTO Scores (PlayerID, MapName, Score)
+            VALUES (@PlayerID, @MapName, @Score)";
+
+                using (var cmd = new SqlCommand(insertSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PlayerID", playerID);
+                    cmd.Parameters.AddWithValue("@MapName", mapName);
+                    cmd.Parameters.AddWithValue("@Score", score);
+                    cmd.ExecuteNonQuery();
+                }
+
+                return true; // đã lưu thành công (điểm mới cao hơn)
+            }
+        }
+        // ── Lấy điểm cao nhất của 1 người theo map ────────
+
     }
 }
-

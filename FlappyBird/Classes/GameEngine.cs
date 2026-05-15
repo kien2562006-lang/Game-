@@ -108,7 +108,7 @@ namespace FlappyBird.Classes
             }
 
             // ── Bật tính năng theo mốc điểm ─────────────── ← THÊM VÀO ĐÂY
-            if (score >= 15 && !currentMap.MovingPipes)
+            if (score >= 10 && !currentMap.MovingPipes)
             {
                 currentMap.MovingPipes = true;
 

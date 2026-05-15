@@ -143,6 +143,16 @@ namespace FlappyBird.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pause {
+            get {
+                object obj = ResourceManager.GetObject("pause", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phong_nen {
             get {
                 object obj = ResourceManager.GetObject("phong_nen", resourceCulture);
@@ -186,6 +196,16 @@ namespace FlappyBird.Properties {
         internal static System.Drawing.Bitmap pipe_volcano {
             get {
                 object obj = ResourceManager.GetObject("pipe_volcano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resume {
+            get {
+                object obj = ResourceManager.GetObject("resume", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

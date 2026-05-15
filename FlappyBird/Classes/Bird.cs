@@ -44,7 +44,7 @@ namespace FlappyBird.Classes
         }
 
         // ── Update ────────────────────────────────────
-        public void Update(float dt)  // bỏ tham số gravity — Bird tự có rồi
+        public void Update(float dt) 
         {
             velocityY += gravity * dt;
             velocityY = Math.Min(velocityY, maxFallSpeed); // giới hạn tốc độ rơi
@@ -87,7 +87,7 @@ namespace FlappyBird.Classes
         // ── Hitbox ────────────────────────────────────
         public Rectangle GetHitbox()
         {
-            int padding = 5;
+            int padding = 10;
             return new Rectangle(
                 (int)X + padding,
                 (int)Y + padding,

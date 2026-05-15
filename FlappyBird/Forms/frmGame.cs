@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using FlappyBird.Classes;
+using FlappyBird.Properties;
 
 namespace FlappyBird.Forms
 {
@@ -14,7 +15,7 @@ namespace FlappyBird.Forms
         private Stopwatch stopwatch; // đo delta time chính xác
         private string playerName;
         public bool IsRetrying = false;
-        // ── Constructor ───────────────────────────────
+        // ── Constructor ─────────────────────────────
         // Nhận GameEngine đã được tạo sẵn từ frmMenu
         public frmGame(GameEngine engine, string playerName)
         {
@@ -86,8 +87,10 @@ namespace FlappyBird.Forms
             }
 
             if (e.KeyCode == Keys.P)
+            {
                 engine.TogglePause();
-
+                UpdatePauseButtonUI();
+            }
             // Nhấn Escape → thoát về menu
             if (e.KeyCode == Keys.Escape)
             {
@@ -135,12 +138,19 @@ namespace FlappyBird.Forms
             base.OnFormClosed(e);
         }
 
-        
 
+        private void UpdatePauseButtonUI()
+        {
+            btnPause.BackgroundImage = engine.IsPaused
+                ? Resources.resume
+                : Resources.pause;
+
+            btnPause.BackgroundImageLayout = ImageLayout.Stretch;
+        } 
         private void btnPause_Click_1(object sender, EventArgs e)
         {
             engine.TogglePause();
-            btnPause.Text = engine.IsPaused ? "▶" : "⏸";
+            UpdatePauseButtonUI();
         }
     }
 }

@@ -27,33 +27,27 @@ namespace FlappyBird.Forms
             this.finalScore = finalScore;
             this.currentMap = currentMap;
             this.playerName = playerName;
-           
-            // Lấy highScore TRƯỚC khi lưu
-            highScore = DatabaseHelper.GetBestScore(playerName, currentMap.MapName);
-            
-            // Rồi mới lưu
-            SaveScore();
-            
 
-            // Giờ so sánh mới đúng
-            lblNewRecord.Text = (finalScore > highScore) ? "🎉 NEW RECORD!" : "";
+            // Lấy top 1 của map TRƯỚC khi lưu
+            int mapTopScoreBefore = DatabaseHelper.GetMapTopScore(currentMap.MapName);
 
-            // Cập nhật lại highScore để hiển thị đúng
-            highScore = DatabaseHelper.GetBestScore(playerName, currentMap.MapName);
-            lblHighScore.Text = "BEST SCORE: " + highScore;
+            // Lưu điểm (chỉ lưu nếu cao hơn lần trước của người này)
+            playerID = DatabaseHelper.GetOrCreatePlayer(playerName);
+            bool saved = DatabaseHelper.SaveScoreIfBetter(playerID, playerName, currentMap.MapName, finalScore);
+
+            // NEW RECORD: chỉ hiện khi vượt top 1 của toàn map
+            bool isNewMapRecord = saved && (finalScore > mapTopScoreBefore);
+            lblNewRecord.Text = isNewMapRecord ? "🎉 NEW RECORD!" : "";
+
+            // Hiển thị điểm
             lblFinalScore.Text = "SCORE: " + finalScore;
 
-            
-        }
-       
-        // ─ Lưu điểm cao nhất xuống file ──────────────
-        private void SaveScore()
-        {
-            playerID = DatabaseHelper.GetOrCreatePlayer(playerName);
-            DatabaseHelper.SaveScore(playerID, currentMap.MapName, finalScore);
+            // Best score cá nhân để hiển thị (lấy lại sau khi đã lưu)
+            highScore = DatabaseHelper.GetMapTopScore(currentMap.MapName);
+            lblHighScore.Text = "BEST SCORE: " + highScore;
+
 
         }
-        // ── Retry — chơi lại cùng map ─────────────────
     
 
         // ── Menu — về màn hình chọn map ───────────────

@@ -46,9 +46,11 @@
             // btnPause
             // 
             this.btnPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPause.BackgroundImage = global::FlappyBird.Properties.Resources.pause;
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPause.Location = new System.Drawing.Point(12, 12);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(83, 75);
+            this.btnPause.Size = new System.Drawing.Size(56, 53);
             this.btnPause.TabIndex = 2;
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click_1);

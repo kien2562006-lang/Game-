@@ -219,31 +219,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Effect\" />
-    <Folder Include="Resources\Obstacles\Hazard\" />
-    <Folder Include="Resources\Obstacles\Warning\" />
-    <Folder Include="Resources\Sound\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Background\Forest.png" />
-    <Content Include="Resources\Background\Space.png" />
-    <Content Include="Resources\Background\Storm.png" />
-    <Content Include="Resources\Background\Volcano.png" />
-    <Content Include="Resources\Bird\bird_gif.gif" />
-    <None Include="Resources\phong_nen.png" />
-    <None Include="Resources\logo.png" />
-    <None Include="Resources\nen.png" />
-    <None Include="Resources\nen1.png" />
-    <None Include="Resources\nen2.png" />
-    <None Include="Resources\game_over.png" />
-    <None Include="Resources\game_over1.png" />
-    <None Include="Resources\game_over2.png" />
-    <Content Include="Resources\Obstacles\Pipe\pipe_forest.png" />
-    <Content Include="Resources\Obstacles\Pipe\pipe_space.png" />
-    <Content Include="Resources\Obstacles\Pipe\pipe_storm.png" />
-    <Content Include="Resources\Obstacles\Pipe\pipe_volcano.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

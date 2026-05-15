@@ -95,7 +95,7 @@ namespace FlappyBird.Classes
             maxpipeSpeed: 440f,
             gapSize: 130,
             spawnInterval: 1600,
-            obstacleTypes: new List<string> { "fire", "meteor" },
+            obstacleTypes: new List<string> { "fire", "enemy" },
             bossScore: 30,
             movingPipes: false
 
@@ -128,7 +128,7 @@ namespace FlappyBird.Classes
             maxpipeSpeed: 560f,
             gapSize: 130,
             spawnInterval: 1200,
-            obstacleTypes: new List<string> { "meteor", "laser" },
+            obstacleTypes: new List<string> { "enemy", "laser" },
             bossScore: 30,
             movingPipes: false
         );
